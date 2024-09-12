@@ -24,8 +24,6 @@ app.get('/getimages', (req, res) => {
       .then(response => {
         const imgTags = response.data?.match(/<img.*?>|<img.*?\/>/g)
         
-        console.log(imgTags)
-
         const srcAttributes = imgTags?.map((img) => 
           img.match(/src=".*?"/g) ? img.match(/src=".*?"/g).join("") : img
         )

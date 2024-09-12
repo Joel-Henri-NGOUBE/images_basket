@@ -1,6 +1,6 @@
 services:
   web-service:
-    image: api:v1
+    image: pics_wallet:v1
     build:
        context: .
        dockerfile: Dockerfile
